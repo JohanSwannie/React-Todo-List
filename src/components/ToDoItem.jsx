@@ -18,8 +18,8 @@ function ToDoItem({ todo }) {
 
   return (
     <div
-      className={`flex border border-black/10 rounded-lg px-2 py-1 gap-x-3 shadow-sm shadow-white/50 duration-300  text-black ${
-        todo.completed ? "bg-[#31817b]" : "bg-[#90a399]"
+      className={`flex rounded-lg px-2 py-1 gap-x-3 shadow-sm  duration-300  text-black ${
+        todo.completed ? "bg-[#961515] text-white" : "bg-[#90a399]"
       }`}
     >
       <input
@@ -30,8 +30,8 @@ function ToDoItem({ todo }) {
       />
       <input
         type="text"
-        className={`border outline-none w-full bg-transparent rounded-lg ${
-          canTodoBeEdited ? "border-white px-2 py-1" : "border-transparent"
+        className={`w-full bg-transparent rounded-lg ${
+          canTodoBeEdited ? "bg-[#5bd483]" : "bg-[#90a399]"
         }`}
         value={todoMessage}
         onChange={(e) => setTodoMessage(e.target.value)}
