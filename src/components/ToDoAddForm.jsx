@@ -15,7 +15,7 @@ const ToDoAddForm = () => {
   const addTodoMessage = (event) => {
     event.preventDefault();
     if (!todoMessage) return;
-    addToDo({ todoMessage, completed: false });
+    addToDo({ todo: todoMessage, completed: false });
     setTodoMessage("");
   };
 
