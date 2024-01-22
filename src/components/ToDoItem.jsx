@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useToDo } from "../contexts";
 
-const ToDoItem = ({ todo }) => {
+function ToDoItem({ todo }) {
   const [todoMessage, setTodoMessage] = useState(todo.todo);
   const [canTodoBeEdited, setCanTodoBeEdited] = useState(false);
 
@@ -19,7 +19,7 @@ const ToDoItem = ({ todo }) => {
   return (
     <div
       className={`flex border border-black/10 rounded-lg px-2 py-1 gap-x-3 shadow-sm shadow-white/50 duration-300  text-black ${
-        todo.completed ? "bg-[#70af55]" : "bg-[#84caa4]"
+        todo.completed ? "bg-[#31817b]" : "bg-[#90a399]"
       }`}
     >
       <input
@@ -58,6 +58,6 @@ const ToDoItem = ({ todo }) => {
       </button>
     </div>
   );
-};
+}
 
 export default ToDoItem;
