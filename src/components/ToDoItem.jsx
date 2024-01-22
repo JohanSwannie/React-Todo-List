@@ -20,7 +20,7 @@ function ToDoItem({ todo }) {
     <div
       className={`flex rounded-lg px-2 py-1 gap-x-3 shadow-sm  duration-300  text-black ${
         todo.completed ? "bg-[#961515] text-white" : "bg-[#90a399]"
-      }`}
+      } ${canTodoBeEdited ? "bg-[#5bd483]" : "bg-[#90a399]"}`}
     >
       <input
         type="checkbox"
@@ -30,9 +30,7 @@ function ToDoItem({ todo }) {
       />
       <input
         type="text"
-        className={`w-full bg-transparent rounded-lg ${
-          canTodoBeEdited ? "bg-[#5bd483]" : "bg-[#90a399]"
-        }`}
+        className="w-full bg-transparent rounded-lg"
         value={todoMessage}
         onChange={(e) => setTodoMessage(e.target.value)}
         readOnly={!canTodoBeEdited}
